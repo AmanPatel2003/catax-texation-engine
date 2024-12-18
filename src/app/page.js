@@ -189,7 +189,7 @@ export default function Home() {
   }, [files]);
 
   const getGraphData = async () => {
-    const url = `https://taxation-engine.onrender.com/get-graph-data?user_id=${userId}`;
+    const url = `http://127.0.0.1:8000/get-graph-data?user_id=${userId}`;
 
     try {
       const response = await axios.post(
@@ -251,7 +251,7 @@ export default function Home() {
 
     try {
       const response = await axios.post(
-        "https://taxation-engine.onrender.com/uploadfiles",
+        "http://127.0.0.1:8000/uploadfiles",
         formData,
         {
           headers: { "Content-Type": "multipart/form-data" },
@@ -273,7 +273,7 @@ export default function Home() {
 
     try {
       const response = await axios.post(
-        "https://taxation-engine.onrender.com/exchanges",
+        "http://127.0.0.1:8000/exchanges",
         selectedValues,
         {
           headers: {
@@ -321,7 +321,7 @@ export default function Home() {
 
     try {
       const response = await axios.post(
-        "https://taxation-engine.onrender.com/uploadfiles",
+        "http://127.0.0.1:8000/uploadfiles",
         formData,
         {
           headers: {
@@ -355,7 +355,7 @@ export default function Home() {
   const downloadPLS = async () => {
     try {
       const response = await axios.post(
-        `https://taxation-engine.onrender.com/download_pls/${userId}`,
+        `http://127.0.0.1:8000/download_pls/${userId}`,
         {},
         {
           headers: {
